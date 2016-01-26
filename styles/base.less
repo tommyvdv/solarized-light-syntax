@@ -13,8 +13,11 @@ atom-text-editor, :host {
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
+    background-color: mix(@base3, @syntax-gutter-background-color, 75%);
     color: @syntax-gutter-text-color;
+    .line-number {
+      color: mix(@base3, @syntax-gutter-text-color, 75%);
+    }
   }
 
   .gutter .line-number {
@@ -36,7 +39,7 @@ atom-text-editor, :host {
   }
 
   .line-number.cursor-line {
-    background-color: @syntax-gutter-background-color-selected;
+    background-color: mix(@base3, @syntax-gutter-background-color, 50%);
   }
 }
 
